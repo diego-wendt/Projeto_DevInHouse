@@ -1,4 +1,4 @@
-<h1 align="center"> Projeto - DevInCRUD </h1>
+<h1 align="center"> Projeto - DevIsKnowledge </h1>
 
 ## :hammer: Sistema para leituras rápidas a respeito de tecnologias com base em um sistema de cards, onde cada card é uma postagem. Além da leitura o sistema também permite:
 
