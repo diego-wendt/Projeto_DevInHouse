@@ -103,11 +103,11 @@ function checkErrors() {
     if (!newTitleVL || newTitleVL < 8 || newTitleVL > 64) {
         errorMsg += "\nO campo Título deve ter entre 8 ou 64 caracteres."
     }
-    if (!newSkillVL || newSkillVL < 8 || newSkillVL > 32) {
-        errorMsg += "\nO campo Linguagem/Skill deve ter entre 8 ou 32 caracteres."
+    if (!newSkillVL || newSkillVL < 4 || newSkillVL > 16) {
+        errorMsg += "\nO campo Linguagem/Skill deve ter entre 4 ou 16 caracteres."
     }
-    if (!newDescriptionVL || newDescriptionVL < 16 || newDescriptionVL > 1024) {
-        errorMsg += "\nO campo Descrição deve ter entre 16 ou 1024 caracteres."
+    if (!newDescriptionVL || newDescriptionVL < 32 || newDescriptionVL > 512) {
+        errorMsg += "\nO campo Descrição deve ter entre 32 ou 512 caracteres."
     }
     if (newCategory.value === "Vazio") {
         errorMsg += "\nO campo Categoria deve ser selecionado."
@@ -171,6 +171,9 @@ function clearForm() {
 function clearSearchBar() {
     cancelEdit();
     inputSearchEl.value = "";
+    removeRenderCards()
+    listCards = getLocalStorage()
+    renderAllCards(listCards);
 }
 
 function renderCards(listCards) {
@@ -300,7 +303,7 @@ function editCards(card) {
 
 // ainda falta implementar
 function openCards(card) {
-    window.open(card.link); 
+    window.open(card.link);
 }
 
 function filterCards() {
@@ -315,7 +318,7 @@ function filterCards() {
 
     removeRenderCards();
     renderAllCards(listCards);
-    clearSearchBar();
+    // clearSearchBar();
 }
 
 function cancelEdit() {

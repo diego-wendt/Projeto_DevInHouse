@@ -48,7 +48,13 @@
   display: flex;
   justify-content: center;
   width: 100%;
+}
 
+.title{
+  font-size: 1.6em;
+  color: rgb(218, 245, 255);
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .areaForm {
