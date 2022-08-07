@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+}
+
+:root {
+  --BgLeftBar: rgb(49, 133, 252);
+  --FtLeftBar: rgb(255, 0, 89);
+  --BgRightBar: rgb(173, 189, 255);
+  --BgMiniCard: rgb(0, 255, 8);
+  --FtMiniCard: rgb(240, 240, 240);
+  --BgCard: rgb(234, 234, 234);
+  --BgCardFocus: rgb(221, 221, 221);
+  --FtCard: rgb(55, 55, 55);
+}
+
+.screen {
+  display: flex;
+  flex-direction: row;
+  min-width: 1100px;
+}
+
+/* ############### BARRA ESQUERDA ######################### */
+
+.barLeft {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  justify-content: flex-start;
+  background-color: var(--BgLeftBar);
+  color: var(--ftLeftBar);
+  height: 100vh;
+  position: fixed;
+}
+
+.barLeftContent {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.logoForm {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.areaForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  margin-left: 3%;
+}
+
+.inputForm {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 2em;
+  border-radius: 15px 0px 15px 0px;
+  padding-top: 5px;
+  padding-left: 10px;
+  height: 30px;
+  border: 2px solid #ccc;
+  transition: 0.5s;
+  outline: none;
+}
+
+.inputForm:focus {
+  border: 2px solid #555;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 35%,
+      rgb(171, 171, 171) 100%);
+}
+
+.textArea {
+  height: 100px;
+  border: 2px solid #ccc;
+  transition: 0.5s;
+  outline: none;
+  resize: none;
+}
+
+.textArea:focus {
+  border: 2px solid #555;
+}
+
+.formButtons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ############### BARRA DIREITA ######################### */
+
+.barRight {
+  display: flex;
+  flex-direction: column;
+  padding-left: 300px;
+  width: 100%;
+  justify-content: flex-start;
+  /* background-color: ; */
+  align-self: flex-start;
+  min-height: 100%;
+}
+
+.barRightContent {
+  padding: 10px;
+  background-color: var(--BgRightBar);
+}
+
+.rodape {
+  font-size: 20px;
+
+
+}
+
+/* ############### AREA MINI CARDS ######################### */
+.areaMiniCard {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly
+}
+
+.miniCard {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 71%);
+  color: var(--FtMiniCard);
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.miniCardNumbers {
+  margin-top: 5px;
+  font-size: 25px;
+}
+
+/* ############## AREA DE PESQUISA ####################### */
+
+.areaSearch {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.inputSearch {
+  width: 100%;
+  border-radius: 15px;
+  padding-left: 10px;
+  border: 2px solid #ccc;
+  transition: 0.5s;
+  outline: none;
+}
+
+.inputSearch:focus {
+  border: 2px solid #555;
+}
+
+.btnSearch {
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.btnCancel {
+  cursor: pointer;
+}
+
+/* ############## AREA CARD PRINCIPAL##################### */
+
+.areaCards {
+  color: var(--BgLeftBar);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 10px;
+  width: 100%;
+}
+
+.cards {
+  background-color: var(--BgCard);
+  color: var(--FtCard);
+  padding: 15px;
+  min-height: 300px;
+  display: inline-grid;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 15px;
+  transition-duration: 0.1s;
+}
+
+.cards:hover {
+  border: 2px solid #B74F6F;
+  background-color: var(--BgCardFocus);
+}
+
+.mainCardContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.areaGroup {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+
+}
+
+.cardSubTitle {
+  margin-right: 10px;
+}
+
+.descriptionText {
+  margin-top: 10px
+}
+
+
+.cardButtonsArea {
+  margin-top: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.cardButtons {
+  cursor: pointer;
+  margin-left: 5px;
+}

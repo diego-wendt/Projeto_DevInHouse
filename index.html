@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/css/index.css" />
+  <link rel="stylesheet" href="./src/css/buttons.css">
+  <link rel="stylesheet" href="src/css/mediaScreen.css">
+  <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
+
+  <title>DevInKnowledge</title>
+</head>
+
+<body class="screen">
+
+  <section class="barLeft">
+    <div class="barLeftContent">
+      <header>
+        <div class="logoForm">
+          <h1>DevInKnowledge</h1>
+        </div>
+      </header>
+
+      <div class="areaForm">
+        <div>
+          <label for="titulo" class="formLabel">Título</label><br>
+          <input type="text" class="inputForm" id="formTitle" name="titulo" placeholder="Título">
+        </div>
+        <div>
+          <label for="linguagem" class="formLabel">Linguagem/Skill</label><br>
+          <input type="text" class="inputForm" id="formSkill" name="linguagem" placeholder="Linguagem / Skill">
+        </div>
+
+        <div>
+          <label for="categoria" class="formLabel">Categoria</label><br>
+          <select name="categoria" class="inputForm" id="formCategory">
+            <option value="Vazio">Selecione uma categoria</option>
+            <option value="FrontEnd">FrontEnd</option>
+            <option value="BackEnd">BackEnd</option>
+            <option value="FullStack">FullStack</option>
+            <option value="SoftSkill">SoftSkill</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="descricao" class="formLabel">Descrição</label><br>
+          <textarea class="inputForm textArea" id="formDescription" name="descricao" placeholder="Descricao"></textarea>
+        </div>
+
+        <div>
+          <label for="videos" class="formLabel">Vídeo do Youtube*</label><br>
+          <input type="url" class="inputForm" id="formLink" name="videos" placeholder="Vídeo do Youtube">
+        </div>
+
+      </div>
+      <div class="formButtons">
+        <button id="btnClear" class="btnClear">Limpar</button>
+        <button id="btnSave" class="btnSave">Salvar</button>
+      </div>
+    </div>
+    <footer class="rodape">
+      <div>
+        <p>Website desenvolvido por:</p>
+        <p>Diego Wendt Rodrigues</p>
+      </div>
+    </footer>
+  </section>
+
+
+
+  <!-- ################################ -->
+  <div class="barRight">
+    <div class="barRightContent">
+
+      <header class="areaMiniCard">
+        <div class="miniCard">
+          <p class="miniCardText">Total</p>
+          <p class="miniCardNumbers" id="miniCardTotal"></p>
+        </div>
+        <div class="miniCard">
+          <p class="miniCardText">FrontEnd</p>
+          <p class="miniCardNumbers" id="miniCardFrontEnd"></p>
+        </div>
+        <div class="miniCard">
+          <p class="miniCardText">BackEnd</p>
+          <p class="miniCardNumbers" id="miniCardBackEnd"></p>
+        </div>
+        <div class="miniCard">
+          <p class="miniCardText">FullStack</p>
+          <p class="miniCardNumbers" id="miniCardFullStack"></p>
+        </div>
+        <div class="miniCard">
+          <p class="miniCardText">SofSkill</p>
+          <p class="miniCardNumbers" id="miniCardSoftSkill"></p>
+        </div>
+      </header>
+
+      <section class="areaSearch">
+        <input type="text" class="inputSearch" id="inputSearch" placeholder="Digite um título para buscar...">
+        <span id="btnSearch" class="btnSearch"><img src="src/img/pesquisar2.png" alt="Delete"></span>
+        <span id="btnCancel" class="btnCancel"><img src="src/img/close.png" alt="Delete"></span>
+      </section>
+
+      <main>
+        <ul class="areaCards" id="areaCards">
+
+        </ul>
+      </main>
+    </div>
+  </div>
+
+
+  <script type="module" src="./src/js/index.js"></script>
+</body>
+
+</html>
