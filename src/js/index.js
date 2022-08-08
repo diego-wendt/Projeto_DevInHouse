@@ -275,7 +275,9 @@ function renderCards(listCards) {
 function deleteCards(card) {
 
     cancelEdit()
-
+    if (!confirm('Você tem certeza de que deseja excluir este card?')) {
+        return
+    }
     document.getElementById(card.id).remove()
 
     const removedCard = card;
@@ -291,6 +293,9 @@ function deleteCards(card) {
 
 function editCards(card) {
 
+    if (!confirm('Você tem certeza de que deseja editar este card?')) {
+        return
+    }
     idHiden = card.id;
     document.getElementById('formTitle').value = card.title
     document.getElementById('formSkill').value = card.skill
@@ -298,6 +303,8 @@ function editCards(card) {
     document.getElementById('formDescription').value = card.description
     document.getElementById('formLink').value = card.link
     btnClearEl.innerText = 'Cancelar';
+
+    window.alert("Após a alteração, clique em salvar para confirmar a edição ou em limpar para cancelar a edição.");
 
 }
 
